@@ -1,0 +1,27 @@
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class Simple {//anagram
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String a = sc.nextLine();
+        String b = sc.nextLine();
+
+       
+        a = a.toLowerCase();
+        b = b.toLowerCase();
+
+        char[] x = a.toCharArray();
+        char[] y = b.toCharArray();
+
+    
+        Arrays.sort(x);
+        Arrays.sort(y);
+
+      
+        if (Arrays.equals(x, y)) {
+            System.out.println("Anagrams");
+        } else {
+            System.out.println("Not Anagrams");
+        }
+    }
